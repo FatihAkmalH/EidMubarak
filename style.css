@@ -188,6 +188,9 @@ body {
     .container {
         width: 100%;
     }
+    .input-box input {
+        margin-top: 0;
+    }
     .container .input-box {
         width: 300px;
     }

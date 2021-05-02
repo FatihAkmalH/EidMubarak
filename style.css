@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Truculenta', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top, #538d22 0%, #73a942 100%);
+}
+.container {
+    max-width: 100vw;
+    width: 100%;
+    border-radius: 10px;
+    /* padding: 25px; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .input-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    margin: 20px 0;
+    background: #aad576;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* display: none; */
+}
+.input-box h3 {
+    color: #143601;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+::placeholder {
+    opacity: 70%;
+    color: #143601;
+    letter-spacing: 1px;
+}
+.input-box input {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    border: 1px solid #143601;
+    font-size: 17px;
+    color: #143601;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+}
+.input-box button {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #143601;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #143601;
+    outline: none;
+    font-size: 20px;
+    color: #aad576;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    opacity: 40%;
+    pointer-events: none;
+}
+.input-box button.active {
+    opacity: 100%;
+    pointer-events: auto;
+}
+
+/* CONTENT STYLE */
+.container .content {
+    position: absolute;
+    /* padding: 10px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.content img {
+    position: absolute;
+}
+.ornament {
+    height: 500px;
+    width: 100%;
+    opacity: 0.5;
+    bottom: -150px;
+}
+.masjid {
+    width: 100%;
+    height: 400px;
+    top: -89px;
+    opacity: 0.7;
+}
+.ketupat {
+    height: 300px;
+    width: 150px;
+    bottom: -80px;
+    z-index: -10;
+    left: 42%;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.4));
+}
+.lafadz1, .lafadz2 {
+    height: 150px;
+    width: 150px;
+    bottom: 100px;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+}
+.lafadz1 {
+    right: 100px;
+}
+.lafadz2 {
+    left: 100px;
+}
+.text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.295); */
+    height: 300px;
+    width: 550px;
+    padding: 10px;
+    cursor: pointer;
+}
+.text h2 {
+    font-size: 35px;
+    cursor: default;
+}
+.text .ke {
+    margin: 20px 0;
+}
+.text .ke .nama {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.text .ucapan {
+    line-height: 30px;
+}
+.text p {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.text .ke .nama .bx {
+    background: rgba(255, 255, 255, 0.295); 
+    width: 35px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 36%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.text .ke .nama:hover .bx {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Media Query */
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+    }
+    .container .input-box {
+        width: 300px;
+    }
+    .container .content {
+        width: 100%;
+    }
+    .text {
+        width: 300px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text p {
+        font-size: 12px;
+    }
+    .ornament, .masjid {
+        width: 100%;
+    }
+    .masjid {
+        top: -67px;
+    }
+    .lafadz1, .lafadz2 {
+        width: 100px;
+        height: 100px;
+        bottom: 200px;
+    }
+    .lafadz1 {
+        right: 50px;
+    }
+    .lafadz2 {
+        left: 50px;
+    }
+}

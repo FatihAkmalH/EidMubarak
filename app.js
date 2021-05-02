@@ -59,7 +59,13 @@ function hapusNama(index) {
     //setelah diapus update local storage
     localStorage.setItem("New Name", JSON.stringify(list_array));
     mainTask();
-    inputCard.style.display = "block";
-    konten.style.visibility = "hidden";
-    konten.style.opacity = "0";
+    if (list_array == 0) {
+        inputCard.style.display = "block";
+        konten.style.visibility = "hidden";
+        konten.style.opacity = "0";
+    } else {
+        inputCard.style.display = "none";
+        konten.style.visibility = "visible";
+        konten.style.opacity = "1";
+    }
 }
